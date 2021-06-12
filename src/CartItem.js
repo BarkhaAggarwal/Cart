@@ -10,6 +10,9 @@ constructor(){
         img : ''
     }
 }
+increaseQuantity= () =>{
+    console.log("this" ,this.state);
+}
 
     render () {
         const{price, title, qty} = this.state;
@@ -24,9 +27,20 @@ constructor(){
                  <div style={ {color: '#777'}}>Qty:{qty}</div>
                  <div className="cart-item-actions">
                      {/* Buttons */}
-                     <img  alt="increase" className="action-icons" src="https://image.flaticon.com/icons/png/512/709/709484.png" />
-                     <img  alt="decrease" className="action-icons" src="https://image.flaticon.com/icons/png/512/659/659892.png" />
-                     <img  alt="delete" className="action-icons" src="https://image.flaticon.com/icons/png/512/1345/1345874.png" />
+                     <img  
+                     alt="increase" 
+                     className="action-icons" 
+                     src="https://image.flaticon.com/icons/png/512/709/709484.png" 
+                     onClick={this.increaseQuantity}
+                     />
+                     <img  
+                     alt="decrease" 
+                     className="action-icons" 
+                     src="https://image.flaticon.com/icons/png/512/659/659892.png" />
+                     <img  
+                     alt="delete" 
+                     className="action-icons" 
+                     src="https://image.flaticon.com/icons/png/512/1345/1345874.png" />
 
                  </div>
              </div>
