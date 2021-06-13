@@ -11,7 +11,19 @@ constructor(){
     }
 }
 increaseQuantity= () =>{
-    console.log("this" ,this.state);
+    //console.log("this" ,this.state);
+
+    //SET STATE FORM 1
+    // this.setState({
+    //     qty: this.state.qty+1
+    // });
+
+    ///SET STATE FORM 2 -if previous state require use this 
+    this.setState((prevState)=>{
+        return{
+            qty: prevState.qty+1
+        }
+    });
 }
 
     render () {
